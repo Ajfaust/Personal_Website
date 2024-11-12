@@ -9,7 +9,7 @@ export const Route = createRootRoute({
     <>
       <main>
         <div className="grid w-screen max-md:grid-cols-2">
-          <div className="mt-20 flex-col justify-items-center">
+          <div className="my-10 flex-col justify-items-center">
             <Title />
           </div>
           <div className="mt-20 w-1/2">
