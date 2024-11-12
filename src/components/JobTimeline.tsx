@@ -5,6 +5,7 @@ interface JobProps {
   start: string
   end?: string
   description: string
+  tech: string[]
 }
 
 const jobs: JobProps[] = [
@@ -16,6 +17,7 @@ const jobs: JobProps[] = [
     end: 'Jul. 2023',
     description:
       'Developed and maintained the main customer-facing application of a cerebral robotic ultrasound device, including upgrading and adding key exam export features',
+    tech: ['C#', '.NET', 'Python', 'SQLite', 'Jenkins'],
   },
   {
     company: 'General Atomics',
@@ -25,6 +27,7 @@ const jobs: JobProps[] = [
     end: 'Jun. 2021',
     description:
       'Built the fault and alert service for the central software controller of a large laser system, and collaborated with cross-functional teams to facilitate the integration and testing of software and hardware components',
+    tech: ['C++', 'RedHat Linux'],
   },
   {
     company: 'Riot Energy (formerly ZPower)',
@@ -34,6 +37,7 @@ const jobs: JobProps[] = [
     end: 'May 2020',
     description:
       'Worked with engineers and manufacturing floor workers to design and enhance core desktop and web applications used throughout the battery manufacturing process',
+    tech: ['C#', '.NET', 'ASP.NET', 'Python', 'MSSQL'],
   },
   {
     company: 'Bunim Murray Productions',
@@ -43,6 +47,7 @@ const jobs: JobProps[] = [
     end: 'Nov. 2017',
     description:
       'Worked with CTO, IT, HR, and Receptionists to import data from SQL Databases and HRM software into interactive applications for better visibility and ease of use',
+    tech: ['C#', 'JavaScript', 'MSSQL'],
   },
 ]
 
@@ -72,9 +77,16 @@ export function JobTimeline() {
             </svg>
           </div>
           <div className="timeline-end mx-5 mb-10">
-            <p className="font-bold">{job.company}</p>
-            <p className="italic">{job.title}</p>
+            <div className="mb-2">
+              <p className="font-bold">{job.company}</p>
+              <p className="italic">{job.title}</p>
+            </div>
             <p>{job.description}</p>
+            <div className="my-2 space-x-2">
+              {job.tech.map((t) => (
+                <div className="badge badge-accent">{t}</div>
+              ))}
+            </div>
           </div>
           {idx < jobs.length - 1 && <hr />}
         </li>
