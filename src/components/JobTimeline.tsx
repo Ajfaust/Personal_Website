@@ -58,7 +58,7 @@ export function JobTimeline() {
         <li key={idx}>
           {idx > 0 && <hr />}
           <div className="timeline-start mb-auto">
-            <div className="mx-5 font-light">
+            <div className="px-5 font-light">
               {job.start} - {job.end ?? 'Present'}
             </div>
           </div>
@@ -76,13 +76,13 @@ export function JobTimeline() {
               />
             </svg>
           </div>
-          <div className="timeline-end mx-5 mb-10">
-            <div className="mb-2">
+          <div className="timeline-end px-5 pb-10">
+            <div className="pb-2">
               <p className="font-bold">{job.company}</p>
               <p className="italic">{job.title}</p>
             </div>
             <p>{job.description}</p>
-            <div className="my-2 space-x-2 whitespace-nowrap">
+            <div className="space-x-2 py-2 xl:whitespace-nowrap">
               {job.tech.map((t, idx) => (
                 <div key={idx} className="badge badge-accent">
                   {t}
