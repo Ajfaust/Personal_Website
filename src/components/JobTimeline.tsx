@@ -82,7 +82,7 @@ export function JobTimeline() {
               <p className="italic">{job.title}</p>
             </div>
             <p>{job.description}</p>
-            <div className="my-2 space-x-2">
+            <div className="my-2 space-x-2 whitespace-nowrap">
               {job.tech.map((t, idx) => (
                 <div key={idx} className="badge badge-accent">
                   {t}

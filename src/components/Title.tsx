@@ -1,16 +1,15 @@
 import { IconType } from 'react-icons'
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa6'
-import profile from '../../public/profile.png'
 
 export function Title() {
   return (
-    <div className="justify-items-center">
+    <div className="flex flex-col items-center justify-center">
       <Avatar />
       <div className="text-center">
-        <h1 className="text-5xl font-bold">Andrew Faust</h1>
-        <p className="py-6">Software Engineer</p>
+        <p className="text-5xl font-bold">Andrew Faust</p>
+        <p className="mb-5 mt-2 text-xl">Software Engineer</p>
       </div>
-      <div className="flex flex-row space-x-3">
+      <div className="flex flex-row space-x-5">
         <Social Icon={FaGithub} url="https://github.com/Ajfaust" />
         <Social Icon={FaLinkedin} url="https://linkedin.com/in/ajfaust" />
         <Social Icon={FaEnvelope} url="mailto:hello@ajfaust.com" />
@@ -23,7 +22,7 @@ function Avatar() {
   return (
     <div className="avatar">
       <div className="w-48 rounded-full">
-        <img src={profile} alt="Avatar" />
+        <img src="/profile.png" alt="Avatar" />
       </div>
     </div>
   )
