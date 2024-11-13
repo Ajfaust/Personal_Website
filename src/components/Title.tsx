@@ -1,5 +1,6 @@
 import { IconType } from 'react-icons'
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa6'
+import profile from '../../public/profile.png'
 
 export function Title() {
   return (
@@ -22,7 +23,7 @@ function Avatar() {
   return (
     <div className="avatar">
       <div className="w-48 rounded-full">
-        <img src="/src/assets/profile.png" alt="Avatar" />
+        <img src={profile} alt="Avatar" />
       </div>
     </div>
   )
