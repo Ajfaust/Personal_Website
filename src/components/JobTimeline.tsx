@@ -55,7 +55,7 @@ export function JobTimeline() {
   return (
     <ul className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact">
       {jobs.map((job: JobProps, idx: number) => (
-        <li>
+        <li key={idx}>
           {idx > 0 && <hr />}
           <div className="timeline-start mb-auto">
             <div className="mx-5 font-light">
@@ -83,8 +83,10 @@ export function JobTimeline() {
             </div>
             <p>{job.description}</p>
             <div className="my-2 space-x-2">
-              {job.tech.map((t) => (
-                <div className="badge badge-accent">{t}</div>
+              {job.tech.map((t, idx) => (
+                <div key={idx} className="badge badge-accent">
+                  {t}
+                </div>
               ))}
             </div>
           </div>
