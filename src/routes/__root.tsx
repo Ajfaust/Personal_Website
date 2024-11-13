@@ -20,12 +20,15 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <main>
-        <div className="mb-20 flex flex-col items-center justify-between xl:flex-row xl:items-start">
-          <div className="mt-20 max-w-3xl items-start xl:sticky xl:top-20 xl:mx-auto">
+        <div className="my-20 flex flex-col items-center xl:flex-row xl:items-start xl:justify-center xl:space-x-32 2xl:space-x-52">
+          <div className="mb-20 w-1/2 lg:w-1/3 xl:sticky xl:top-20 xl:w-1/3 2xl:w-1/5">
             <Title />
           </div>
-          <div className="mx-10 mt-20 max-w-3xl items-center xl:relative xl:mx-auto">
-            <div id="about" className="mb-20 flex flex-col space-y-5 text-left">
+          <div className="w-2/5 items-center xl:relative">
+            <div
+              id="about"
+              w-className="mb-20 flex flex-col space-y-5 text-left"
+            >
               <SectionTitle title="About Me" />
               <p>
                 I am a software engineer with experience in both the medical
@@ -43,7 +46,7 @@ export const Route = createRootRoute({
                 been drawing and flight simulation.
               </p>
             </div>
-            <div className="divider my-10" />
+            <div className="divider my-10 min-w-full" />
             <div id="experience my-20">
               <SectionTitle title="Experience" />
               <JobTimeline />

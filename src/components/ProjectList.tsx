@@ -31,16 +31,16 @@ export function ProjectList() {
   return (
     <div className="flex flex-row items-center justify-between max-xl:flex-col">
       {projects.map((p) => (
-        <div key={p.id} className="card m-5 w-80 bg-base-100 shadow-xl lg:w-96">
+        <div key={p.id} className="card max-w-80 bg-base-100 shadow-xl">
           <div className="card-body">
-            <div className="card-title space-x-2">
+            <div className="card-title mb-5 space-x-2">
               <p.icon size={26} />
               <div className="card-title">{p.title}</div>
             </div>
             <p>{p.desc}</p>
-            <div className="justify-end space-x-2 lg:whitespace-nowrap">
+            <div className="flex flex-row flex-wrap">
               {p.tech.map((t, idx) => (
-                <div key={idx} className="badge badge-primary">
+                <div key={idx} className="badge badge-primary m-1 text-nowrap">
                   {t}
                 </div>
               ))}

@@ -21,7 +21,7 @@ export function Title() {
 function Avatar() {
   return (
     <div className="avatar">
-      <div className="w-48 rounded-full">
+      <div className="m-5 w-44 rounded-full">
         <img src="/profile.png" alt="Avatar" />
       </div>
     </div>
