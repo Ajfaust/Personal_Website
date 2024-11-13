@@ -53,7 +53,7 @@ const jobs: JobProps[] = [
 
 export function JobTimeline() {
   return (
-    <ul className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact">
+    <ul className="timeline timeline-vertical timeline-snap-icon max-lg:timeline-compact">
       {jobs.map((job: JobProps, idx: number) => (
         <li key={idx}>
           {idx > 0 && <hr />}
