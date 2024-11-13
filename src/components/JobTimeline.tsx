@@ -6,11 +6,12 @@ interface JobProps {
   end?: string
   description: string
   tech: string[]
+  url?: string
 }
 
 const jobs: JobProps[] = [
   {
-    company: 'NovaSignal',
+    company: 'NeuraSignal (formerly NovaSignal)',
     title: 'Software Engineer',
     location: 'Los Angeles, CA',
     start: 'Aug. 2021',
@@ -18,6 +19,7 @@ const jobs: JobProps[] = [
     description:
       'Developed and maintained the main customer-facing application of a cerebral robotic ultrasound device, including upgrading and adding key exam export features',
     tech: ['C#', '.NET', 'Python', 'SQLite', 'Jenkins'],
+    url: 'https://neurasignal.com',
   },
   {
     company: 'General Atomics',
@@ -28,6 +30,7 @@ const jobs: JobProps[] = [
     description:
       'Built the fault and alert service for the central software controller of a large laser system, and collaborated with cross-functional teams to facilitate the integration and testing of software and hardware components',
     tech: ['C++', 'RedHat Linux'],
+    url: 'https://www.ga.com/',
   },
   {
     company: 'Riot Energy (formerly ZPower)',
@@ -38,6 +41,7 @@ const jobs: JobProps[] = [
     description:
       'Worked with engineers and manufacturing floor workers to design and enhance core desktop and web applications used throughout the battery manufacturing process',
     tech: ['C#', '.NET', 'ASP.NET', 'Python', 'MSSQL'],
+    url: 'https://riotenergy.com/',
   },
   {
     company: 'Bunim Murray Productions',
@@ -48,6 +52,7 @@ const jobs: JobProps[] = [
     description:
       'Worked with CTO, IT, HR, and Receptionists to import data from SQL Databases and HRM software into interactive applications for better visibility and ease of use',
     tech: ['C#', 'JavaScript', 'MSSQL'],
+    url: 'https://www.bunim-murray.com/',
   },
 ]
 
@@ -57,26 +62,11 @@ export function JobTimeline() {
       {jobs.map((job: JobProps, idx: number) => (
         <li key={idx}>
           {idx > 0 && <hr />}
-          <div className="timeline-start mb-auto">
-            <div className="px-5 font-light">
-              {job.start} - {job.end ?? 'Present'}
-            </div>
-          </div>
-          <div className="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="size-5"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </div>
-          <div className="timeline-end px-5 pb-10">
+          <a
+            href={job.url ?? ''}
+            target="_blank"
+            className="peer timeline-end timeline-box mx-5 mb-10 w-full border-primary/0 hover:cursor-pointer hover:border-primary/100 hover:shadow-md hover:shadow-accent"
+          >
             <div className="pb-2">
               <p className="font-bold">{job.company}</p>
               <p className="italic">{job.title}</p>
@@ -89,6 +79,25 @@ export function JobTimeline() {
                 </div>
               ))}
             </div>
+          </a>
+          <div className="timeline-start mb-auto font-light peer-hover:font-bold peer-hover:text-primary">
+            <div className="px-5">
+              {job.start} - {job.end ?? 'Present'}
+            </div>
+          </div>
+          <div className="timeline-middle peer-hover:text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="size-5"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                clipRule="evenodd"
+              />
+            </svg>
           </div>
           {idx < jobs.length - 1 && <hr />}
         </li>

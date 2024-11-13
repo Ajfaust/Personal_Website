@@ -21,10 +21,10 @@ export const Route = createRootRoute({
     <>
       <main>
         <div className="mb-20 flex flex-col items-center justify-between xl:flex-row xl:items-start">
-          <div className="mt-20 items-start xl:sticky xl:left-32 xl:top-20 xl:mx-10">
+          <div className="mt-20 max-w-3xl items-start xl:sticky xl:top-20 xl:mx-auto">
             <Title />
           </div>
-          <div className="mx-10 mt-20 max-w-2xl items-center xl:relative xl:mx-auto">
+          <div className="mx-10 mt-20 max-w-3xl items-center xl:relative xl:mx-auto">
             <div id="about" className="mb-20 flex flex-col space-y-5 text-left">
               <SectionTitle title="About Me" />
               <p>
