@@ -26,7 +26,7 @@ const jobs: JobProps[] = [
     title: 'Software Developer II',
     location: 'San Diego, CA',
     start: 'May. 2020',
-    end: 'Jun. 2021',
+    end: 'Jul. 2021',
     description:
       'Built the fault and alert service for the central software controller of a large laser system, and collaborated with cross-functional teams to facilitate the integration and testing of software and hardware components',
     tech: ['C++', 'RedHat Linux'],
