@@ -30,7 +30,7 @@ function Avatar() {
 
 function Social(props: { Icon: IconType; url: string }) {
   return (
-    <a href={props.url}>
+    <a href={props.url} target="_blank">
       <props.Icon size={28} className="hover:text-primary" />
     </a>
   )

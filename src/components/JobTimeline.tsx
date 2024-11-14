@@ -65,7 +65,7 @@ export function JobTimeline() {
           <a
             href={job.url ?? ''}
             target="_blank"
-            className="peer timeline-end timeline-box mx-5 mb-10 w-full border-primary/0 hover:cursor-pointer hover:border-primary/100 hover:shadow-md hover:shadow-accent"
+            className="peer timeline-end timeline-box mx-5 mb-10 w-full border-primary/0 transition duration-200 ease-in-out hover:-translate-y-1 hover:cursor-pointer hover:border-primary/100 hover:shadow-md hover:shadow-accent hover:transition-all"
           >
             <div className="pb-2">
               <p className="font-bold">{job.company}</p>
@@ -80,7 +80,7 @@ export function JobTimeline() {
               ))}
             </div>
           </a>
-          <div className="timeline-start mb-auto font-light peer-hover:font-bold peer-hover:text-primary">
+          <div className="timeline-start mb-auto font-light transition duration-700 ease-in-out peer-hover:font-semibold peer-hover:text-primary peer-hover:transition-all">
             <div className="px-5">
               {job.start} - {job.end ?? 'Present'}
             </div>

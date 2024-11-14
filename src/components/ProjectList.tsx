@@ -8,6 +8,7 @@ interface Project {
   desc: string
   icon: IconType
   tech: string[]
+  url?: string
 }
 
 const projects: Project[] = [
@@ -17,6 +18,7 @@ const projects: Project[] = [
     desc: 'My personal website, put together with React, Tailwind CSS, and Vite. A fun little project to get hands on experience with frontend frameworks and a place to express my interests.',
     icon: FaReact,
     tech: ['React', 'Typescript', 'Tailwind CSS', 'Vite'],
+    url: 'https://github.com/Ajfaust/Personal_Website',
   },
   {
     id: 1,
@@ -29,9 +31,14 @@ const projects: Project[] = [
 
 export function ProjectList() {
   return (
-    <div className="flex flex-row items-center justify-between max-xl:flex-col">
+    <div className="flex flex-row justify-between max-xl:flex-col max-xl:items-center">
       {projects.map((p) => (
-        <div key={p.id} className="card max-w-80 bg-base-100 shadow-xl">
+        <a
+          href={p.url}
+          target="_blank"
+          key={p.id}
+          className="card card-bordered max-w-80 bg-base-100 shadow-xl hover:cursor-pointer hover:border-primary/100 hover:shadow-accent"
+        >
           <div className="card-body">
             <div className="card-title mb-5 space-x-2">
               <p.icon size={26} />
@@ -46,7 +53,7 @@ export function ProjectList() {
               ))}
             </div>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   )
