@@ -20,12 +20,15 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <main>
-        <div className="my-20 flex flex-col max-xl:items-center xl:flex-row xl:items-start xl:justify-center xl:space-x-32 2xl:space-x-52">
-          <div className="mb-20 w-2/3 text-nowrap xl:sticky xl:top-20 xl:w-1/3 2xl:w-1/5">
+        <div className="my-20 flex flex-col max-xl:items-center xl:flex-row xl:items-start xl:justify-center xl:space-x-52">
+          <div className="mb-20 w-2/3 text-nowrap xl:sticky xl:top-20 xl:w-1/5">
             <Title />
           </div>
-          <div className="w-2/3 items-center xl:relative">
-            <div id="about" className="mb-20 flex flex-col space-y-5 text-left">
+          <div className="w-2/3 items-center xl:relative xl:w-2/5">
+            <div
+              id="about"
+              className="mb-20 flex flex-col space-y-5 justify-self-start text-left"
+            >
               <SectionTitle title="About Me" />
               <p>
                 I am a software engineer with experience in both the medical

@@ -39,13 +39,13 @@ const projects: Project[] = [
 
 export function ProjectList() {
   return (
-    <div className="flex flex-row flex-wrap justify-between max-xl:flex-col max-xl:items-center">
+    <div className="flex grow flex-col flex-wrap justify-between max-xl:items-center xl:flex-row">
       {projects.map((p) => (
         <a
           href={p.url}
           target="_blank"
           key={p.id}
-          className="card card-bordered my-8 max-w-96 bg-base-100 shadow-lg transition duration-200 ease-in-out hover:scale-105 hover:cursor-pointer hover:border-primary/100 hover:shadow-accent hover:transition-all xl:max-w-80"
+          className="card card-bordered my-5 max-w-96 bg-base-100 shadow-lg transition duration-200 ease-in-out hover:scale-105 hover:cursor-pointer hover:border-primary/100 hover:shadow-accent hover:transition-all lg:max-w-80"
         >
           <div className="card-body">
             <div className="card-title mb-5 space-x-2">
