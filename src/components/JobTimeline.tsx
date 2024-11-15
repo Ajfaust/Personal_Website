@@ -74,7 +74,10 @@ export function JobTimeline() {
             <p>{job.description}</p>
             <div className="flex flex-row flex-wrap py-2">
               {job.tech.map((t, idx) => (
-                <div key={idx} className="badge badge-accent my-1 mr-1">
+                <div
+                  key={idx}
+                  className="badge badge-accent my-1 mr-1 whitespace-nowrap"
+                >
                   {t}
                 </div>
               ))}

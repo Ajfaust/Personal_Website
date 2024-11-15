@@ -6,7 +6,7 @@ export function Title() {
     <div className="flex flex-col items-center justify-center">
       <Avatar />
       <div className="text-center">
-        <p className="text-5xl font-bold">Andrew Faust</p>
+        <p className="text-4xl font-bold xl:text-5xl">Andrew Faust</p>
         <p className="mb-5 mt-2 text-xl">Software Engineer</p>
       </div>
       <div className="flex flex-row space-x-5">

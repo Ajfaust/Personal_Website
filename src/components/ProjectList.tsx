@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons'
 import { FaServer } from 'react-icons/fa6'
-import { FaReact } from 'react-icons/fa'
+import { FaPiggyBank, FaReact } from 'react-icons/fa'
 
 interface Project {
   id: number
@@ -22,6 +22,14 @@ const projects: Project[] = [
   },
   {
     id: 1,
+    title: 'Sylenium (WIP)',
+    desc: 'A simple budget tracker using a React frontend and ASP.NET backend with a PostgreSQL database. A fun project to dive deeper into full-stack logic.',
+    icon: FaPiggyBank,
+    tech: ['React', 'Typescript', 'C#', 'ASP.NET Core', 'PostgreSQL'],
+    url: 'https://github.com/Ajfaust/Sylenium',
+  },
+  {
+    id: 2,
     title: 'Home Server',
     desc: 'A personal home server hosting several open source self-hosted applications using Proxmox. More of a hobby than an actual project at this point, but taught me a lot about networking and using Docker. ',
     icon: FaServer,
@@ -31,13 +39,13 @@ const projects: Project[] = [
 
 export function ProjectList() {
   return (
-    <div className="flex flex-row justify-between max-xl:flex-col max-xl:items-center">
+    <div className="flex flex-row flex-wrap justify-between max-xl:flex-col max-xl:items-center">
       {projects.map((p) => (
         <a
           href={p.url}
           target="_blank"
           key={p.id}
-          className="card card-bordered max-w-80 bg-base-100 shadow-xl hover:cursor-pointer hover:border-primary/100 hover:shadow-accent"
+          className="card card-bordered my-8 max-w-96 bg-base-100 shadow-lg transition duration-200 ease-in-out hover:scale-105 hover:cursor-pointer hover:border-primary/100 hover:shadow-accent hover:transition-all xl:max-w-80"
         >
           <div className="card-body">
             <div className="card-title mb-5 space-x-2">
