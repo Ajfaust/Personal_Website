@@ -65,7 +65,7 @@ export function JobTimeline() {
           <a
             href={job.url ?? ''}
             target="_blank"
-            className="peer timeline-end timeline-box mx-5 mb-10 w-full border-primary/0 transition duration-200 ease-in-out hover:-translate-y-1 hover:cursor-pointer hover:border-primary/100 hover:shadow-md hover:shadow-accent hover:transition-all"
+            className="peer timeline-end timeline-box mx-5 mb-10 w-full border-primary/0 transition duration-200 ease-in-out hover:-translate-y-1 hover:cursor-pointer hover:border-primary/100 hover:shadow-md hover:shadow-secondary hover:transition-all"
           >
             <div className="pb-2">
               <p className="font-bold">{job.company}</p>
@@ -76,7 +76,7 @@ export function JobTimeline() {
               {job.tech.map((t, idx) => (
                 <div
                   key={idx}
-                  className="badge badge-accent my-1 mr-1 whitespace-nowrap"
+                  className="badge badge-primary my-1 mr-1 whitespace-nowrap"
                 >
                   {t}
                 </div>

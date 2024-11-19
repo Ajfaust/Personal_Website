@@ -30,8 +30,12 @@ function Avatar() {
 
 function Social(props: { Icon: IconType; url: string }) {
   return (
-    <a href={props.url} target="_blank">
-      <props.Icon size={28} className="hover:text-primary" />
+    <a
+      href={props.url}
+      target="_blank"
+      className="transition ease-in-out hover:scale-125 hover:transition-all"
+    >
+      <props.Icon size={32} className="hover:text-primary" />
     </a>
   )
 }

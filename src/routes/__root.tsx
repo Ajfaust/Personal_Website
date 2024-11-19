@@ -32,10 +32,10 @@ export const Route = createRootRoute({
               <SectionTitle title="About Me" />
               <p>
                 I am a software engineer with experience in both the medical
-                device and aerospace fields. I am most comfortable with C# and
-                Python, but can adjust to other languages quickly and with ease.
-                My favorite work has been that where I can see real-world impact
-                or learning new skills, and where I can collaborate with
+                device and aerospace industries. I am most comfortable with C#
+                and Python, but can adjust to other languages quickly and with
+                ease. My favorite work has been that where I can see real-world
+                impact or learning new skills, and where I can collaborate with
                 multiple teams to create products end-users will enjoy and find
                 intuitive. I am currently learning new fullstack technologies
                 and working toward the Developer Associate AWS certification to
