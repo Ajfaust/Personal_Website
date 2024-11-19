@@ -20,8 +20,8 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <main>
-        <div className="my-20 flex flex-col max-xl:items-center xl:flex-row xl:items-start xl:justify-center xl:space-x-52">
-          <div className="mb-20 w-2/3 text-nowrap xl:sticky xl:top-20 xl:w-1/5">
+        <div className="my-20 flex flex-col max-xl:items-center xl:flex-row xl:items-start xl:justify-center xl:space-x-96">
+          <div className="mb-20 w-2/3 text-nowrap xl:sticky xl:top-20 xl:w-1/12">
             <Title />
           </div>
           <div className="w-2/3 items-center xl:relative xl:w-2/5">
